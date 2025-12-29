@@ -56,7 +56,8 @@ class TaskTileWidget extends StatelessWidget {
                   children: [
                     Text(task.title, style: context.textTheme.titleMedium),
 
-                    ?_buildSubtitle(context),
+                    if (_buildSubtitle(context) != null)
+                      _buildSubtitle(context)!,
                   ],
                 ),
               ),

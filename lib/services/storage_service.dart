@@ -9,7 +9,4 @@ abstract class StorageService {
 
   // delete task from database
   Future<void> delete(String id);
-
-  // Listen to the changes
-  Stream<List<Task>> watchAll();
 }

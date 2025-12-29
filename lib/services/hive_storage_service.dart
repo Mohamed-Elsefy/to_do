@@ -26,9 +26,4 @@ class HiveStorageService implements StorageService {
   Future<void> delete(String id) async {
     await _box.delete(id);
   }
-
-  @override
-  Stream<List<Task>> watchAll() {
-    return _box.watch().map((_) => _box.values.toList());
-  }
 }

@@ -67,4 +67,4 @@ final taskListProvider = StateNotifierProvider<TaskListNotifier, List<Task>>((
 ) {
   final storage = ref.watch(storageServiceProvider);
   return TaskListNotifier(storage);
-}); 
+});
