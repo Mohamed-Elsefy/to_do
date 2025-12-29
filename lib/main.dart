@@ -5,6 +5,8 @@ import 'package:to_do/models/task_adapter.dart';
 import 'package:to_do/providers/task_provider.dart';
 import 'package:to_do/screens/home_screen.dart';
 import 'package:to_do/services/hive_storage_service.dart';
+import 'package:to_do/utils/constants/app_strings.dart';
+import 'package:to_do/utils/themes/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,9 +37,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: AppStrings.toDo,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: AppTheme.light,
+      home: const HomeScreen(),
     );
   }
 }

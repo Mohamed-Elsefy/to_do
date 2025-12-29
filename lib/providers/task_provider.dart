@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:to_do/models/task.dart';
 import 'package:to_do/services/storage_service.dart';
-import 'package:to_do/utils/app_strings.dart';
+import 'package:to_do/utils/constants/app_strings.dart';
 
 final storageServiceProvider = Provider<StorageService>(
   (ref) => throw UnimplementedError(AppStrings.storageServiceNotInit),
