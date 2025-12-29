@@ -121,7 +121,6 @@ class _TaskEditScreenState extends ConsumerState<TaskEditScreen> {
     final notifier = ref.read(taskListProvider.notifier);
 
     if (widget.task == null) {
-
       final newTask = Task(
         title: _titleController.text.trim(),
         description: _descriptionController.text.trim(),
@@ -129,7 +128,6 @@ class _TaskEditScreenState extends ConsumerState<TaskEditScreen> {
         priority: _priority,
         tag: _tag,
       );
-      debugPrint('TITLE: "${_titleController.text}"');
 
       notifier.addTask(newTask);
     } else {
